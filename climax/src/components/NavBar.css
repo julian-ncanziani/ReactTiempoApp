@@ -1,0 +1,30 @@
+.navDiv{
+    background-color: rgba(4, 4, 187, 0.801);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.navDiv span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navDiv span label{
+    
+}
+
+.navDiv span input{
+    margin: 5px;
+}
+
+.navDiv span img{
+    height: 80px;
+    width: 80px;
+    border-radius: 60%;
+    margin-right: 10px;
+    
+}
