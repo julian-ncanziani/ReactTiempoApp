@@ -15,7 +15,7 @@ export function Card({name, weatherInfo, temp, ciudades, setCiudades}){
             <span>
                 <img src={`https://openweathermap.org/img/wn/${weatherInfo.icon}@2x.png`} alt="img" />
                 <p>{temp.toFixed()}°C</p>
-                <h3>{name}</h3>
+                <Link to={`detail/${name}`}> {name}</Link>
             </span>
         </div>
     );
