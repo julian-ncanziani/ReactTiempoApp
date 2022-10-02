@@ -7,10 +7,40 @@
     flex-direction: column;
     width: 20%;
     height: auto;
+    background-color: rgba(182, 182, 182, 0.822);
 }
 
 .cardDiv span button{
+    margin-top: 10px;
+    margin-left: 80%;
+    background-color: rgba(219, 94, 94, 0.918);
+    border-radius: 100%;
+    border-style: solid;
+    border-width: 1px;
+    height: 30px;
+    width: 30px;
+}
+
+.cardDiv span button:hover{
+    background-color:  rgba(219, 74, 74, 0.918);
+}
+
+.link{
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    width: fit-content;
+    margin: auto;
+}
+
+.link:hover{
+    color: rgba(76, 76, 253, 0.925);
     
 }
 
-/* probando111 */
+.cardDiv :link:visited{
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+}
+

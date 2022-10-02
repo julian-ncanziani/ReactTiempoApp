@@ -4,7 +4,7 @@ import './Cards.css';
 
 export function Cards({ciudades, setCiudades}){
 
-    console.log(ciudades);
+    
     return(
         <div className='cardsDiv'>
             {!ciudades ? <></> :
@@ -13,10 +13,8 @@ export function Cards({ciudades, setCiudades}){
                 ciudades={ciudades}
                 setCiudades={setCiudades}
                 key={city.id} 
-                name={city.name} 
-                weatherInfo={city.weather[0]}
-                temp={city.main.temp - 275.15
-                }/>})
+                cityGeneralData={city}
+                />})
             }
         </div>
     );

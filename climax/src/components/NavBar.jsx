@@ -17,7 +17,6 @@ export function NavBar({ciudades, setCiudades}){
                 await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputCity}&appid=${process.env.REACT_APP_API_KEY}`)
                 .then(res => res.json())
                 .then((city) => {
-                    console.log(city);
                     if(city.cod === 200) {
                         arr.push(city);
                         setCiudades(arr);
@@ -34,7 +33,7 @@ export function NavBar({ciudades, setCiudades}){
         <div className='navDiv'>
             <span>
                 <img src={logo} alt="" />
-                <h1>Climax</h1>
+                <h1>Clima-x</h1>
             </span>
             <span>
                 <label htmlFor="">Buscar Ciudad:</label>

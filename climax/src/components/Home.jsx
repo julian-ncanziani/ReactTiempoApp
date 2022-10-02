@@ -9,13 +9,14 @@ import { Detail } from './Detail';
 export function Home (){
     
     const [ciudades, setCiudades] = useState([]);
+    
 
     return(
-        <div>
+        <div className='homeDiv'>
             <NavBar ciudades={ciudades} setCiudades={setCiudades}></NavBar>
             <Routes>
                 <Route index element={<Cards ciudades={ciudades} setCiudades={setCiudades}></Cards>}></Route>
-                <Route path='detail/:city' element={<Detail></Detail>}></Route>
+                <Route path='detail/:city' element={<Detail ciudades={ciudades}></Detail>}></Route>
             </Routes>
         </div>
         

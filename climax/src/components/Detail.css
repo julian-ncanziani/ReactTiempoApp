@@ -1,0 +1,36 @@
+
+.detailDiv{
+    background-color: rgba(201, 201, 198, 0.87);
+    height: auto;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.detailDiv h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.detailDiv img{
+    height: 100px;
+    width: 100px;
+}
+
+.detailDiv li{
+    list-style-type: none;
+    margin-top: 5px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.detailDiv :link{
+    font-size: larger;
+    font-family: cursive;
+    text-decoration: none;
+}
+

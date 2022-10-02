@@ -2,20 +2,24 @@ import React from 'react';
 import './Card.css';
 import {Link} from 'react-router-dom';
 
-export function Card({name, weatherInfo, temp, ciudades, setCiudades}){
+export function Card({ ciudades, setCiudades, cityGeneralData}){
 
     function removeCard(event){
         let arr = [...ciudades];
         arr = ciudades.filter(city => city.name.toLowerCase() !== event.target.value);
         setCiudades(arr);
     }
+    
     return(
         <div className='cardDiv'>
-            <span><button value={name.toLowerCase()} onClick={e=> removeCard(e)}>X</button></span>
             <span>
-                <img src={`https://openweathermap.org/img/wn/${weatherInfo.icon}@2x.png`} alt="img" />
-                <p>{temp.toFixed()}°C</p>
-                <Link to={`detail/${name}`}> {name}</Link>
+                <button value={cityGeneralData.name.toLowerCase()} onClick={e=> removeCard(e)}>X</button>
+            </span>
+            <Link to={`detail/${cityGeneralData.id}`} className='link'>{cityGeneralData.name}</Link>
+            <span>
+                <img src={`https://openweathermap.org/img/wn/${cityGeneralData.weather[0]['icon']}@2x.png`} alt="img" />
+                <p>{(cityGeneralData.main['temp'] - 275.15).toFixed()}°C</p>
+                <p>{cityGeneralData.city_longitude}</p>
             </span>
         </div>
     );
