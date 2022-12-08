@@ -17,6 +17,8 @@ export function Card({ ciudades, setCiudades, cityGeneralData}){
             </span>
             <Link to={`detail/${cityGeneralData.id}`} className='link'>{cityGeneralData.name}</Link>
             <span>
+                <p>{new Date(cityGeneralData.dt * 1000).toLocaleDateString('arg',{weekday: 'long'}).toLocaleUpperCase()}</p>
+                <p>{new Date(cityGeneralData.dt * 1000).toLocaleDateString('arg',{ year:'numeric', month:'numeric', day:'numeric'}).toLocaleUpperCase()}</p>
                 <img src={`https://openweathermap.org/img/wn/${cityGeneralData.weather[0]['icon']}@2x.png`} alt="img" />
                 <p>{(cityGeneralData.main['temp'] - 275.15).toFixed()}°C</p>
                 <p>{cityGeneralData.city_longitude}</p>
